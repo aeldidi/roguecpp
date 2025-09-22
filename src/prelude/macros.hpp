@@ -1,6 +1,8 @@
 #ifndef PRELUDE_MACROS_HPP
 #define PRELUDE_MACROS_HPP
 
+#include <type_traits>
+
 // static_cast to rvalue reference
 #define MOV(...) \
   static_cast<std::remove_reference_t<decltype(__VA_ARGS__)>&&>(__VA_ARGS__)
